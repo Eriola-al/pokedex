@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Card = styled.div`
-    background-color: #eee;
     border-radius: 20px;
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
     margin: 10px;
@@ -32,11 +31,15 @@ const Name = styled.h3`
     }
 `;
 
-const Tag = styled.span`
+const Type = styled.span`
       margin-top: 20px;
+      font-size: 12px;
 `;
 
+
 function PokemonCard({ pokemon, loading }) {
+
+    {}
 
     return (
         <>
@@ -47,7 +50,7 @@ function PokemonCard({ pokemon, loading }) {
                             <ImageContainer><img src={item.sprites.front_default} alt="" /></ImageContainer>
                             <Id>#{item.id.toString().padStart(3,'0')}</Id>
                             <Name>{item.name}</Name>
-                            <Tag>Type: {item.types[0].type.name}</Tag>
+                            <Type>Type: {item.types[0].type.name}</Type>  
                         </Card>
                     )
                 })
